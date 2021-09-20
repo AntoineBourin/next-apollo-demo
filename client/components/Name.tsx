@@ -6,12 +6,12 @@ const GET_NAME = gql`
   }
 `;
 
-const Component = () => {
+const Name: React.FC = () => {
   const { loading, error, data } = useQuery(GET_NAME);
 
-  if (loading) return 'Loading...';
+  if (loading) return (<>Loading...</>);
   if (error) {
-    return `Error! ${error.message}`;
+    return (<>Error! ${error.message}</>);
   }
   return (
     <span>
@@ -20,4 +20,4 @@ const Component = () => {
   );
 };
 
-export default Component
+export default Name;
