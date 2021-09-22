@@ -9,7 +9,7 @@ let apolloClient;
 
 const createApolloClient = (): ApolloClient<NormalizedCacheObject> => {
   const link = createHttpLink({
-    uri: `https://faker-graphql.now.sh/graphql`,
+    uri: process.env.NEXT_PUBLIC_GRAPHQL_URL,
   });
   const cache = new InMemoryCache()
   return new ApolloClient({
