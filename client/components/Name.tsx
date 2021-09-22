@@ -11,7 +11,11 @@ const Name: React.FC = () => {
 
   if (loading) return (<>Loading...</>);
   if (error) {
-    return (<>Error! ${error.message}</>);
+    return (
+      <>
+        Error! ${error.message}
+      </>
+    );
   }
   return (
     <span>

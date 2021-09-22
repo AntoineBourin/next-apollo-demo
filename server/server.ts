@@ -22,7 +22,7 @@ const startApolloServer = async (typedefs: Array<DocumentNode>, resolvers: any) 
     path: '/graphql'
   });
 
-  const port = process.env.PORT || 5000
+  const port = process.env.PORT || 4000
   await new Promise(resolve => httpServer.listen({ port }, () => { resolve(port) }));
   console.log(`🚀 Server ready at http://localhost:${port}${server.graphqlPath}`);
 };

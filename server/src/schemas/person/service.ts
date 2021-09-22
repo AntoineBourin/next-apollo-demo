@@ -16,7 +16,12 @@ const getPersonsRandomList = (count: number): Array<Person> => {
     const result = [];
 
     for (let i = 0; i < times; ++i) {
-      result.push(generator);
+      result.push({
+        name: casual.name,
+        address: casual.address,
+        email: casual.email,
+        phoneNumber: casual.phone,
+      });
     }
 
     return result;
